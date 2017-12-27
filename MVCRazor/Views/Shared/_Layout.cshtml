@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div>下面是页面私有部分</div>
+    @RenderBody()
+    @*<footer>@RenderSection("Footer")</footer>*@　　@*//如果第二个参数不设置，那么如果当视图没有设置节的时候，则会提示错误。*@
+    <footer>
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer", false)
+            @*//如果设置了第二个参数为flase，那么视图可以设置节也可以不设置节都没问题。*@
+        }
+        else
+        {
+            <b>
+                子页面没有Foot
+            </b>
+        }
+    </footer>
+</body>
+</html>
