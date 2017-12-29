@@ -5,3 +5,7 @@
 /.vs
 /MVCRazor/bin
 /MVCRazor/obj
+/AspNetOperatePrinciple/bin
+/AspNetOperatePrinciple/obj
+/AspNetOperatePrinciple/Properties
+/packages
